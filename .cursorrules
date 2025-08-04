@@ -1,0 +1,79 @@
+# Cursor Project Rules - 交換資訊整理系統
+
+## 專案概述
+這是一個聚焦於政大商學院院級交換的資料整合平台，使用 Vue 3 + Supabase 技術棧。
+
+## 技術棧規範
+
+### 前端技術
+- **框架**: Vue 3 (Composition API)
+- **路由**: Vue Router 4
+- **狀態管理**: Pinia
+- **UI 框架**: Element Plus
+- **建構工具**: Vite
+- **語言**: TypeScript
+- **樣式**: Tailwind CSS + SCSS
+
+### 後端技術
+- **平台**: Supabase
+- **資料庫**: PostgreSQL
+- **認證**: Supabase Auth (Google OAuth)
+- **即時功能**: Supabase Realtime
+
+### 部署
+- **前端**: Vercel/Netlify
+- **後端**: Supabase
+
+## 程式碼規範
+
+### Vue 組件規範
+- 使用 Composition API 和 `<script setup>` 語法
+- 組件命名使用 PascalCase
+- 檔案命名使用 kebab-case
+- 優先使用 TypeScript 類型定義
+
+### 資料庫設計
+- 使用 PostgreSQL 關聯式資料庫
+- 主要資料表：schools, experiences, users, comments
+- 遵循正規化原則
+- 使用 Supabase 的 Row Level Security (RLS)
+
+### API 設計
+- RESTful API 設計原則
+- 使用 Supabase 自動生成的 API
+- 實作適當的錯誤處理
+- 使用 TypeScript 類型定義
+
+## 功能模組
+
+### 1. 締約學校資料庫
+- 學校資訊管理
+- 地圖整合展示
+- 搜尋與篩選功能
+
+### 2. 交換心得區
+- PDF 內容萃取
+- 心得分類與標籤
+- 搜尋功能
+
+### 3. 用戶系統
+- Google OAuth 登入
+- 用戶權限管理
+- 個人資料管理
+
+### 4. 投稿系統
+- 心得投稿表單
+- 內容審核機制
+- 評論功能
+
+## 開發流程
+- 使用 Git Flow 工作流程
+- 實作單元測試
+- 程式碼審查
+- 持續整合/部署
+
+## 安全性考量
+- 實作 Row Level Security
+- 輸入驗證與清理
+- HTTPS 加密
+- 定期安全更新 
